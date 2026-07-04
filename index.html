@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Breezy Welding | Custom Gates, RV Gates &amp; Garden Trellises in Arizona</title>
+<meta name="description" content="Breezy Welding builds custom iron &amp; composite gates, RV gates, and garden trellises in the Phoenix metro. Free estimates, quality welds, built to handle the Arizona sun. Call today.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --steel:#1c1f24;
+    --steel-2:#262a31;
+    --spark:#f57c1f;
+    --spark-dark:#d9660e;
+    --sand:#f6f1ea;
+    --white:#ffffff;
+    --text:#2b2f36;
+    --muted:#6b7280;
+    --radius:12px;
+    --shadow:0 10px 30px rgba(0,0,0,.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',sans-serif;color:var(--text);background:var(--white);line-height:1.6}
+  h1,h2,h3{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.5px;line-height:1.15}
+  img{max-width:100%;display:block}
+  a{text-decoration:none;color:inherit}
+  .container{max-width:1120px;margin:0 auto;padding:0 20px}
+  section{padding:72px 0}
+
+  /* ===== Header ===== */
+  header{position:sticky;top:0;z-index:100;background:var(--steel);box-shadow:0 2px 12px rgba(0,0,0,.35)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .logo{font-family:'Oswald',sans-serif;font-weight:700;font-size:1.45rem;color:var(--white);text-transform:uppercase;letter-spacing:1px}
+  .logo span{color:var(--spark)}
+  .nav-links{display:flex;gap:26px;align-items:center}
+  .nav-links a{color:#cdd2da;font-weight:500;font-size:.95rem}
+  .nav-links a:hover{color:var(--white)}
+  .btn{display:inline-block;background:var(--spark);color:var(--white);font-weight:700;padding:13px 26px;border-radius:8px;border:none;cursor:pointer;font-size:1rem;transition:background .15s ease,transform .15s ease}
+  .btn:hover{background:var(--spark-dark);transform:translateY(-1px)}
+  .btn-lg{padding:16px 34px;font-size:1.1rem}
+  .btn-ghost{background:transparent;border:2px solid rgba(255,255,255,.7)}
+  .btn-ghost:hover{background:rgba(255,255,255,.12)}
+  .nav-phone{color:var(--white)!important;font-weight:700;font-size:1.05rem!important}
+  .nav-phone svg{vertical-align:-3px;margin-right:6px}
+
+  /* ===== Hero ===== */
+  .hero{background:
+      linear-gradient(rgba(20,22,26,.78),rgba(20,22,26,.78)),
+      url('images/gate-single-1.jpg') center 35%/cover no-repeat,
+      var(--steel-2);
+    color:var(--white);padding:96px 0 88px}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+  .eyebrow{display:inline-block;background:rgba(245,124,31,.15);border:1px solid var(--spark);color:var(--spark);font-weight:700;font-size:.8rem;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;border-radius:999px;margin-bottom:18px}
+  .hero h1{font-size:clamp(2.2rem,4.5vw,3.4rem);color:var(--white);margin-bottom:18px}
+  .hero h1 em{color:var(--spark);font-style:normal}
+  .hero p.sub{font-size:1.15rem;color:#d5dae2;max-width:520px;margin-bottom:28px}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px}
+  .trust-row{display:flex;gap:22px;flex-wrap:wrap;color:#c3c9d3;font-size:.9rem;font-weight:500}
+  .trust-row div{display:flex;align-items:center;gap:8px}
+  .trust-row svg{flex:none}
+
+  /* Quote card */
+  .quote-card{background:var(--white);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow);color:var(--text)}
+  .quote-card h3{font-size:1.35rem;margin-bottom:4px;color:var(--steel)}
+  .quote-card p{font-size:.92rem;color:var(--muted);margin-bottom:18px}
+  .quote-card label{display:block;font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);margin:12px 0 5px}
+  .quote-card input,.quote-card select,.quote-card textarea{width:100%;padding:12px 14px;border:1.5px solid #d8dce2;border-radius:8px;font-family:inherit;font-size:.98rem;background:#fafbfc}
+  .quote-card input:focus,.quote-card select:focus,.quote-card textarea:focus{outline:none;border-color:var(--spark)}
+  .quote-card .btn{width:100%;margin-top:18px}
+  .quote-note{text-align:center;font-size:.8rem;color:var(--muted);margin-top:10px}
+
+  /* ===== Services ===== */
+  .kicker{color:var(--spark);font-weight:700;letter-spacing:2.5px;text-transform:uppercase;font-size:.82rem;margin-bottom:10px}
+  .section-head{text-align:center;max-width:640px;margin:0 auto 48px}
+  .section-head h2{font-size:clamp(1.7rem,3vw,2.3rem);color:var(--steel);margin-bottom:12px}
+  .section-head p{color:var(--muted)}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .card{background:var(--sand);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease}
+  .card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .card-img{height:210px;background:var(--steel-2) center/cover no-repeat;position:relative}
+  .card-img.rv{background-image:linear-gradient(rgba(0,0,0,.05),rgba(0,0,0,.05)),url('images/gate-rv-1.jpg');background-position:center 40%}
+  .card-img.single{background-image:linear-gradient(rgba(0,0,0,.05),rgba(0,0,0,.05)),url('images/gate-single-1.jpg')}
+  .card-img.trellis{background-image:linear-gradient(rgba(0,0,0,.05),rgba(0,0,0,.05)),url('images/trellis-1.jpg')}
+  .card-body{padding:24px 24px 26px;flex:1;display:flex;flex-direction:column}
+  .card-body h3{font-size:1.2rem;color:var(--steel);margin-bottom:10px}
+  .card-body p{font-size:.95rem;color:var(--muted);flex:1}
+  .card-price{margin-top:16px;font-weight:700;color:var(--spark-dark);font-size:.95rem}
+  .card-link{margin-top:6px;font-weight:600;color:var(--steel);font-size:.9rem}
+  .card-link:hover{color:var(--spark)}
+
+  /* ===== Why us ===== */
+  .why{background:var(--steel);color:var(--white)}
+  .why .section-head h2{color:var(--white)}
+  .why .section-head p{color:#b8bfc9}
+  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+  .why-item{text-align:center;padding:0 8px}
+  .why-item .icon{width:58px;height:58px;border-radius:50%;background:rgba(245,124,31,.14);border:1.5px solid var(--spark);display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+  .why-item h3{font-size:1.02rem;color:var(--white);margin-bottom:8px}
+  .why-item p{font-size:.88rem;color:#b8bfc9}
+
+  /* ===== Process ===== */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;counter-reset:step}
+  .step{background:var(--white);border:1.5px solid #e6e9ee;border-radius:var(--radius);padding:30px 26px;position:relative}
+  .step::before{counter-increment:step;content:counter(step);position:absolute;top:-20px;left:24px;width:40px;height:40px;border-radius:50%;background:var(--spark);color:var(--white);font-family:'Oswald',sans-serif;font-weight:700;font-size:1.15rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(245,124,31,.4)}
+  .step h3{font-size:1.08rem;color:var(--steel);margin:10px 0 8px}
+  .step p{font-size:.92rem;color:var(--muted)}
+  .process{background:var(--sand)}
+
+  /* ===== Gallery ===== */
+  .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .g-item{border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3;background:var(--steel-2) center/cover no-repeat;position:relative}
+  .g-item span{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,rgba(0,0,0,.75));color:var(--white);font-size:.85rem;font-weight:600;padding:26px 14px 12px}
+  .g-1{background-image:url('images/gate-single-1.jpg');background-position:center 40%}
+  .g-2{background-image:url('images/trellis-pots.jpg')}
+  .g-3{background-image:url('images/trellis-poolside.jpg')}
+  .g-4{background-image:url('images/trellis-bougainvillea.jpg')}
+  .g-5{background-image:url('images/trellis-modern.jpg')}
+  .g-6{background-image:url('images/gate-rv-1.jpg')}
+  .g-7{background-image:url('images/gate-rv-2.jpg')}
+  .g-8{background-image:url('images/trellis-desert.jpg')}
+  .g-9{background-image:url('images/shop-fabrication.jpg');background-position:center 60%}
+
+  /* ===== Reviews ===== */
+  .reviews{background:var(--sand)}
+  .review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .review{background:var(--white);border-radius:var(--radius);padding:28px;box-shadow:0 4px 14px rgba(0,0,0,.06)}
+  .stars{color:#f5a623;font-size:1.05rem;letter-spacing:2px;margin-bottom:12px}
+  .review p{font-size:.95rem;color:var(--text);margin-bottom:16px}
+  .review .name{font-weight:700;font-size:.9rem;color:var(--steel)}
+  .review .loc{font-size:.82rem;color:var(--muted)}
+
+  /* ===== FAQ ===== */
+  .faq-list{max-width:760px;margin:0 auto}
+  details{border:1.5px solid #e6e9ee;border-radius:10px;padding:18px 22px;margin-bottom:12px;background:var(--white)}
+  details[open]{border-color:var(--spark)}
+  summary{font-weight:600;cursor:pointer;color:var(--steel);font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center}
+  summary::after{content:'+';font-size:1.4rem;color:var(--spark);font-weight:400}
+  details[open] summary::after{content:'–'}
+  details p{margin-top:12px;color:var(--muted);font-size:.95rem}
+
+  /* ===== CTA band ===== */
+  .cta-band{background:
+      linear-gradient(rgba(217,102,14,.88),rgba(190,85,8,.88)),
+      url('images/trellis-poolside.jpg') center/cover no-repeat;
+    color:var(--white);text-align:center;padding:64px 0}
+  .cta-band h2{font-size:clamp(1.6rem,3vw,2.2rem);color:var(--white);margin-bottom:12px}
+  .cta-band p{max-width:520px;margin:0 auto 26px;color:#fff3e8}
+  .cta-band .btn{background:var(--steel)}
+  .cta-band .btn:hover{background:#000}
+
+  /* ===== Footer ===== */
+  footer{background:var(--steel);color:#aab1bc;padding:48px 0 28px;font-size:.9rem}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;margin-bottom:34px}
+  footer h4{color:var(--white);font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:1rem;margin-bottom:14px;letter-spacing:1px}
+  footer a:hover{color:var(--white)}
+  .foot-links a{display:block;margin-bottom:8px}
+  .foot-bottom{border-top:1px solid #343a44;padding-top:22px;text-align:center;font-size:.82rem;color:#7b8394}
+
+  /* ===== Mobile call bar ===== */
+  .call-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--steel);padding:10px 14px;gap:10px;box-shadow:0 -4px 16px rgba(0,0,0,.3)}
+  .call-bar a{flex:1;text-align:center;padding:13px 0;border-radius:8px;font-weight:700;font-size:.98rem}
+  .call-bar .call{background:var(--spark);color:var(--white)}
+  .call-bar .quote{background:var(--white);color:var(--steel)}
+
+  @media(max-width:900px){
+    .hero-grid{grid-template-columns:1fr;gap:40px}
+    .cards,.review-grid,.steps{grid-template-columns:1fr}
+    .why-grid{grid-template-columns:repeat(2,1fr)}
+    .gallery-grid{grid-template-columns:repeat(2,1fr)}
+    .foot-grid{grid-template-columns:1fr}
+    .nav-links a:not(.nav-phone):not(.btn){display:none}
+    .call-bar{display:flex}
+    body{padding-bottom:64px}
+    section{padding:56px 0}
+  }
+  @media(max-width:560px){
+    .gallery-grid{grid-template-columns:1fr}
+    .why-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="#" class="logo">Breezy<span>Welding</span></a>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#gallery">Our Work</a>
+      <a href="#process">Process</a>
+      <a href="#faq">FAQ</a>
+      <a href="tel:[removed]" class="nav-phone">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+        [removed]</a>
+      <a href="#quote" class="btn">Free Quote</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="top">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">Custom Welding &amp; Fabrication • Phoenix Metro</span>
+      <h1>Custom Gates &amp; Trellises <em>Built to Last</em> the Arizona Sun</h1>
+      <p class="sub">Hand-welded RV gates, entry gates, and garden trellises — fabricated to fit your property exactly, installed clean, and priced fair. No big-box kits. No shortcuts.</p>
+      <div class="hero-ctas">
+        <a href="#quote" class="btn btn-lg">Get My Free Quote</a>
+        <a href="tel:[removed]" class="btn btn-lg btn-ghost">Call [removed]</a>
+      </div>
+      <div class="trust-row">
+        <div><svg width="16" height="16" viewBox="0 0 24 24" fill="#f57c1f"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 16.9 5.9 20.4l1.5-6.8L2.2 9l6.9-.7z"/></svg> Local &amp; Family-Run</div>
+        <div><svg width="16" height="16" viewBox="0 0 24 24" fill="#f57c1f"><path d="M12 1L3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-4zm-1 15l-4-4 1.4-1.4L11 13.2l5.6-5.6L18 9l-7 7z"/></svg> Workmanship Guarantee</div>
+        <div><svg width="16" height="16" viewBox="0 0 24 24" fill="#f57c1f"><path d="M12 22C6.5 22 2 17.5 2 12S6.5 2 12 2s10 4.5 10 10-4.5 10-10 10zm1-15h-2v6l5.2 3.1 1-1.6-4.2-2.5V7z"/></svg> Fast Turnaround</div>
+      </div>
+    </div>
+
+    <!-- Quote form -->
+    <div class="quote-card" id="quote">
+      <h3>Get a Free Estimate</h3>
+      <p>Tell us about your project — we'll get back to you within one business day.</p>
+      <form action="https://formsubmit.co/breezywelding@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New quote request — BreezyWelding.com">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" id="next-url" value="">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="Your name" required>
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" type="tel" placeholder="(480) 555-1234" required>
+        <label for="project">Project Type</label>
+        <select id="project" name="project">
+          <option>RV Gate</option>
+          <option>Single / Walkway Gate</option>
+          <option>Garden Trellis</option>
+          <option>Custom Fabrication / Repair</option>
+        </select>
+        <label for="details">Project Details</label>
+        <textarea id="details" name="details" rows="3" placeholder="Approximate size, style, timeline…"></textarea>
+        <button type="submit" class="btn">Request My Quote →</button>
+      </form>
+      <p class="quote-note">No spam, no pressure. Just an honest number.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section id="services">
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker">What We Build</p>
+      <h2>Gates &amp; Metalwork, Made For Your Property</h2>
+      <p>Every piece is measured, welded, and finished by hand — sized to your opening, matched to your home.</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="card-img rv"></div>
+        <div class="card-body">
+          <h3>RV Gates</h3>
+          <p>Wide-opening dual or single-swing RV gates with heavy-duty steel frames and composite or iron infill. Secure your side yard without sacrificing looks.</p>
+          <div class="card-price">Starting at $2,400</div>
+          <a class="card-link" href="#quote">Get an RV gate quote →</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img single"></div>
+        <div class="card-body">
+          <h3>Single &amp; Walkway Gates</h3>
+          <p>Custom entry and side-yard gates like the one above — powder-coated steel frame, composite wood-look slats, self-latching hardware. Zero rot, zero warping.</p>
+          <div class="card-price">Starting at $1,200</div>
+          <a class="card-link" href="#quote">Get a gate quote →</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img trellis"></div>
+        <div class="card-body">
+          <h3>Garden Trellises</h3>
+          <p>Welded steel trellises and garden structures that hold up to desert heat and heavy vines — from simple wall panels to full arbor features.</p>
+          <div class="card-price">Starting at $350</div>
+          <a class="card-link" href="#quote">Get a trellis quote →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY US ===== -->
+<section class="why">
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker">Why Breezy Welding</p>
+      <h2>Built Right The First Time</h2>
+      <p>We're welders, not salesmen. You deal directly with the person building your gate.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="#f57c1f"><path d="M22 9l-9.9 9.9-4.2-4.2L9.3 13l2.8 2.8L20.6 7.6 22 9zM4 22h9v-2H4V4h9V2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2z"/></svg></div>
+        <h3>True Custom Sizing</h3>
+        <p>Measured to your exact opening — no forcing a stock panel into a space it doesn't fit.</p>
+      </div>
+      <div class="why-item">
+        <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="#f57c1f"><path d="M12 1L3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-4z"/></svg></div>
+        <h3>Desert-Proof Materials</h3>
+        <p>Powder-coated steel and composite infill that won't rot, warp, or peel in 115° summers.</p>
+      </div>
+      <div class="why-item">
+        <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="#f57c1f"><path d="M12 22C6.5 22 2 17.5 2 12S6.5 2 12 2s10 4.5 10 10-4.5 10-10 10zm1-15h-2v6l5.2 3.1 1-1.6-4.2-2.5V7z"/></svg></div>
+        <h3>On Time, On Budget</h3>
+        <p>Clear quote up front, honest timeline, and we show up when we say we will.</p>
+      </div>
+      <div class="why-item">
+        <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="#f57c1f"><path d="M12 21.4l-1.4-1.3C5.4 15.4 2 12.3 2 8.5 2 5.4 4.4 3 7.5 3c1.7 0 3.4.8 4.5 2.1C13.1 3.8 14.8 3 16.5 3 19.6 3 22 5.4 22 8.5c0 3.8-3.4 6.9-8.6 11.6L12 21.4z"/></svg></div>
+        <h3>Workmanship Guarantee</h3>
+        <p>If a weld or hinge we installed fails, we come back and make it right. Period.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section id="gallery">
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker">Recent Work</p>
+      <h2>Our Latest Builds</h2>
+      <p>Real projects, real backyards — no stock photos.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="g-item g-1"><span>Composite single gate — steel frame</span></div>
+      <div class="g-item g-2"><span>Flower-pot trellis wall, poolside</span></div>
+      <div class="g-item g-3"><span>Backyard trellis &amp; lounge wall</span></div>
+      <div class="g-item g-4"><span>Bougainvillea on a wall trellis</span></div>
+      <div class="g-item g-5"><span>Modern pool-wall trellis set</span></div>
+      <div class="g-item g-6"><span>Dual-swing RV gate, composite slats</span></div>
+      <div class="g-item g-7"><span>Cedar &amp; steel dual RV gate</span></div>
+      <div class="g-item g-8"><span>Desert backyard trellis set</span></div>
+      <div class="g-item g-9"><span>Fresh frames welded in our shop</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROCESS ===== -->
+<section class="process" id="process">
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker">How It Works</p>
+      <h2>From Quote to Installed in 3 Steps</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <h3>Free On-Site Estimate</h3>
+        <p>We come out, measure your opening, talk through styles and materials, and give you a firm number — usually same visit.</p>
+      </div>
+      <div class="step">
+        <h3>Custom Fabrication</h3>
+        <p>Your gate is welded and finished in our shop — steel frame, powder coat, and infill cut to fit your space exactly.</p>
+      </div>
+      <div class="step">
+        <h3>Clean Installation</h3>
+        <p>We hang it, level it, set the latch, and haul off any old gate or debris. You get a gate that swings right for years.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REVIEWS ===== -->
+<section class="reviews">
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker">Happy Customers</p>
+      <h2>What Neighbors Are Saying</h2>
+    </div>
+    <div class="review-grid">
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>"They measured on a Tuesday and my new side gate was installed by the weekend. Welds are clean and it swings perfectly. Worth every penny."</p>
+        <div class="name">Sarah M.</div>
+        <div class="loc">Mesa, AZ</div>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>"Got three quotes for an RV gate. Breezy Welding wasn't the cheapest, but the quality difference was obvious. It's built like a tank."</p>
+        <div class="name">Dave R.</div>
+        <div class="loc">Gilbert, AZ</div>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>"The trellis they built for my garden is beautiful and hasn't budged through two monsoon seasons. Great communication the whole way."</p>
+        <div class="name">Linda T.</div>
+        <div class="loc">Chandler, AZ</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq">
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker">Questions</p>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <details>
+        <summary>How much does a custom gate cost?</summary>
+        <p>Single walkway gates typically start around $1,200 and RV gates around $2,400, depending on size, materials, and hardware. Every quote is firm — the number we give you is the number you pay.</p>
+      </details>
+      <details>
+        <summary>How long does it take?</summary>
+        <p>Most gates are fabricated and installed within 1–2 weeks of your deposit. Trellises and smaller pieces are often faster.</p>
+      </details>
+      <details>
+        <summary>What materials do you use?</summary>
+        <p>Heavy-gauge steel frames with powder-coat finish, and your choice of infill — composite wood-look slats (no rot, no warping), wrought iron pickets, or perforated metal for privacy.</p>
+      </details>
+      <details>
+        <summary>Do you do repairs on existing gates?</summary>
+        <p>Yes — sagging gates, broken hinges, rusted latches, and re-welds. If it's metal, we can usually fix it.</p>
+      </details>
+      <details>
+        <summary>What areas do you serve?</summary>
+        <p>The greater Phoenix metro — Mesa, Gilbert, Chandler, Tempe, Scottsdale, Queen Creek, and surrounding areas.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA BAND ===== -->
+<section class="cta-band">
+  <div class="container">
+    <h2>Ready for a Gate You'll Never Think About Again?</h2>
+    <p>Free estimates. Firm pricing. Welded by hand right here in the Valley.</p>
+    <a href="#quote" class="btn btn-lg">Get My Free Quote</a>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <h4>Breezy Welding</h4>
+        <p>Custom gates, RV gates, and garden trellises — hand-welded in Arizona, built for the desert.</p>
+      </div>
+      <div class="foot-links">
+        <h4>Services</h4>
+        <a href="#services">RV Gates</a>
+        <a href="#services">Single &amp; Walkway Gates</a>
+        <a href="#services">Garden Trellises</a>
+        <a href="#services">Custom Fabrication</a>
+      </div>
+      <div class="foot-links">
+        <h4>Contact</h4>
+        <a href="tel:[removed]">[removed]</a>
+        <a href="mailto:breezywelding@gmail.com">breezywelding@gmail.com</a>
+        <p style="margin-top:8px">Serving the Phoenix Metro<br>Mon–Sat, 7am–6pm</p>
+      </div>
+    </div>
+    <div class="foot-bottom">© 2026 Breezy Welding. All rights reserved. · Licensed &amp; Insured</div>
+  </div>
+</footer>
+
+<!-- ===== MOBILE CALL BAR ===== -->
+<div class="call-bar">
+  <a href="tel:[removed]" class="call">📞 Call Now</a>
+  <a href="#quote" class="quote">Free Quote</a>
+</div>
+
+<script>
+  document.getElementById('next-url').value = location.origin + '/thanks.html';
+</script>
+
+</body>
+</html>
