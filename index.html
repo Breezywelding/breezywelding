@@ -28,7 +28,7 @@
   img{max-width:100%;display:block}
   a{text-decoration:none;color:inherit}
   .container{max-width:1120px;margin:0 auto;padding:0 20px}
-  section{padding:72px 0}
+  section{padding:72px 0;scroll-margin-top:76px}
 
   /* ===== Header ===== */
   header{position:sticky;top:0;z-index:100;background:var(--steel);box-shadow:0 2px 12px rgba(0,0,0,.35)}
@@ -67,7 +67,7 @@
   .quote-card h3{font-size:1.35rem;margin-bottom:4px;color:var(--steel)}
   .quote-card p{font-size:.92rem;color:var(--muted);margin-bottom:18px}
   .quote-card label{display:block;font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);margin:12px 0 5px}
-  .quote-card input,.quote-card select,.quote-card textarea{width:100%;padding:12px 14px;border:1.5px solid #d8dce2;border-radius:8px;font-family:inherit;font-size:.98rem;background:#fafbfc}
+  .quote-card input,.quote-card select,.quote-card textarea{width:100%;padding:12px 14px;border:1.5px solid #d8dce2;border-radius:8px;font-family:inherit;font-size:1rem;background:#fafbfc}
   .quote-card input:focus,.quote-card select:focus,.quote-card textarea:focus{outline:none;border-color:var(--spark)}
   .quote-card .btn{width:100%;margin-top:18px}
   .quote-note{text-align:center;font-size:.8rem;color:var(--muted);margin-top:10px}
@@ -175,6 +175,11 @@
     .call-bar{display:flex}
     body{padding-bottom:64px}
     section{padding:56px 0}
+  }
+  @media(max-width:700px){
+    .nav-phone{display:none!important}
+    .logo{font-size:1.2rem}
+    .nav .btn{padding:11px 18px;font-size:.95rem}
   }
   @media(max-width:560px){
     .gallery-grid{grid-template-columns:1fr}
