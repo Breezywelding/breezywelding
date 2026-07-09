@@ -99,7 +99,7 @@
   .trust-row svg{flex:none}
 
   /* Quote card */
-  .quote-card{background:var(--white);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow);color:var(--text)}
+  .quote-card{background:var(--white);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow);color:var(--text);scroll-margin-top:84px}
   .quote-card h3{font-size:1.35rem;margin-bottom:4px;color:var(--steel)}
   .quote-card p{font-size:.92rem;color:var(--muted);margin-bottom:18px}
   .quote-card label{display:block;font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);margin:12px 0 5px}
@@ -107,6 +107,10 @@
   .quote-card input:focus,.quote-card select:focus,.quote-card textarea:focus{outline:none;border-color:var(--spark)}
   .quote-card .btn{width:100%;margin-top:18px}
   .quote-note{text-align:center;font-size:.8rem;color:var(--muted);margin-top:10px}
+  .form-fallback{display:none;margin-top:16px;background:#fff7f0;border:1.5px solid var(--spark);border-radius:8px;padding:16px}
+  .form-fallback p{font-size:.9rem;color:var(--text);margin-bottom:12px}
+  .form-fallback p a{color:var(--spark-dark);font-weight:700}
+  .form-fallback .btn{margin-top:0;text-align:center}
 
   /* ===== Services ===== */
   .kicker{color:var(--spark);font-weight:700;letter-spacing:2.5px;text-transform:uppercase;font-size:.82rem;margin-bottom:10px}
@@ -288,6 +292,10 @@
         <textarea id="details" name="details" rows="3" placeholder="Approximate size, style, timeline…"></textarea>
         <button type="submit" class="btn">Request My Quote →</button>
       </form>
+      <div class="form-fallback" id="form-fallback">
+        <p><strong>Sorry, our form is having trouble right now.</strong> Your request did not go through. Call or text us at <a href="tel:[removed]">[removed]</a>, or send your details by email instead:</p>
+        <a id="mailto-fallback" class="btn" href="mailto:breezywelding@gmail.com">Email Us Your Details</a>
+      </div>
       <p class="quote-note">No spam, no pressure. Just an honest number.</p>
     </div>
   </div>
@@ -517,6 +525,60 @@
 
 <script>
   document.getElementById('next-url').value = location.origin + '/thanks.html';
+
+  // Submit via fetch so we can catch FormSubmit outages; if it fails, show the
+  // call/email fallback instead of stranding the visitor on an error page.
+  // With JS disabled the form still posts natively to FormSubmit.
+  (function () {
+    var form = document.querySelector('.quote-card form');
+    var btn = form.querySelector('button[type="submit"]');
+    var fallback = document.getElementById('form-fallback');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (form.querySelector('[name="_honey"]').value) return;
+      var originalText = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+      fallback.style.display = 'none';
+      var fields = {
+        name: document.getElementById('name').value,
+        phone: document.getElementById('phone').value,
+        project: document.getElementById('project').value,
+        details: document.getElementById('details').value
+      };
+      var controller = new AbortController();
+      var timer = setTimeout(function () { controller.abort(); }, 12000);
+      fetch('https://formsubmit.co/ajax/breezywelding@gmail.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(Object.assign({
+          _subject: 'New quote request from breezywelding.com',
+          _template: 'table',
+          _captcha: 'false'
+        }, fields)),
+        signal: controller.signal
+      }).then(function (res) {
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        return res.json();
+      }).then(function (json) {
+        if (!json || (json.success !== true && json.success !== 'true')) throw new Error('rejected');
+        location.href = 'thanks.html';
+      }).catch(function () {
+        btn.disabled = false;
+        btn.textContent = originalText;
+        var body = 'Name: ' + fields.name + '\nPhone: ' + fields.phone +
+                   '\nProject: ' + fields.project + '\nDetails: ' + fields.details;
+        document.getElementById('mailto-fallback').href =
+          'mailto:breezywelding@gmail.com?subject=' +
+          encodeURIComponent('Quote request from breezywelding.com') +
+          '&body=' + encodeURIComponent(body);
+        fallback.style.display = 'block';
+        fallback.scrollIntoView({ block: 'nearest' });
+      }).finally(function () {
+        clearTimeout(timer);
+      });
+    });
+  })();
 </script>
 
 </body>

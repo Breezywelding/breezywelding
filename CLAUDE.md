@@ -23,7 +23,14 @@ fabrication + install after deposit. Keep those promises consistent if pricing c
 The hero quote card posts to https://formsubmit.co/breezywelding@gmail.com — no account needed.
 It uses a honeypot spam field (`_honey`), table-formatted email (`_template=table`), captcha off,
 and a `_next` redirect to `thanks.html` (set by the inline script at the bottom of index.html so
-it works on any domain). **One-time activation:** the first-ever submission sends a confirmation
+it works on any domain).
+
+**Outage fallback (added Jul 2026 after formsubmit.co went down with a Cloudflare 522):** the
+inline script intercepts submit and posts to FormSubmit's AJAX endpoint with a 12s timeout; on
+success it redirects to thanks.html, on any failure it shows `#form-fallback` in the quote card
+(call/text number + a mailto link prefilled with the form fields) so leads aren't lost while
+FormSubmit is down. With JS disabled the form still posts natively. If FormSubmit keeps having
+outages, consider switching to Web3Forms or Formspree. **One-time activation:** the first-ever submission sends a confirmation
 email to breezywelding@gmail.com; Bryan must click the activation link before submissions arrive.
 Activation is tied to the email, not the domain, so a localhost test submission works.
 
@@ -51,18 +58,21 @@ shop-fabrication. `trellis-row.jpg` and `trellis-vines.jpg` are in the folder bu
 
 ## Backlog / next tasks
 
-1. Confirm the one-time FormSubmit activation was done (first submission triggers a
-   confirmation email to breezywelding@gmail.com that Bryan must click). Test the form live.
-2. Replace the three placeholder testimonials with real customer quotes as they come in.
-3. Adjust service-area cities in FAQ + footer if Bryan's actual coverage differs.
-4. ROC license: if Bryan gets licensed with the AZ Registrar of Contractors, add the number to
+1. Replace the three placeholder testimonials with real customer quotes as they come in.
+2. Adjust service-area cities in FAQ + footer if Bryan's actual coverage differs.
+3. ROC license: if Bryan gets licensed with the AZ Registrar of Contractors, add the number to
    the footer (big trust signal in AZ). Footer currently says "Licensed & Insured" — confirm
    that claim with Bryan or soften it.
-5. JSON-LD has no street address (shop address unknown) — add a PostalAddress if Bryan wants
+4. JSON-LD has no street address (shop address unknown) — add a PostalAddress if Bryan wants
    the shop or a service-area base listed; helps local search.
 
 ## Done
 
+- FormSubmit activation confirmed by Bryan (Jul 2026): form was activated and tested working
+  before the Jul 2026 formsubmit.co outage.
+- Form outage fallback + quote-card scroll-margin fix (Jul 2026), shipped during a formsubmit.co
+  522 outage. The AJAX success path (redirect to thanks.html) still needs one live test once
+  FormSubmit is back up.
 - SEO (Jul 2026, mirrored from earthlight-lash): inline SVG favicon (orange spark on steel,
   also on thanks.html), canonical URL, Open Graph/Twitter tags, LocalBusiness JSON-LD
   (areaServed cities, Mo–Sa 07:00–18:00), og.png share image (1200x630, regenerate via a
