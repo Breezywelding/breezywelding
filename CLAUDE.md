@@ -77,9 +77,8 @@ shop-fabrication. `trellis-row.jpg` and `trellis-vines.jpg` are in the folder bu
 
 - Earthlight-lash learnings pass (Jul 2026): gallery + service-card photos converted from CSS
   backgrounds to real `<img loading="lazy">` with alt text (defers ~2 MB below the fold, adds
-  image SEO); vercel.json 308-redirects breezywelding.vercel.app and the apex to
-  https://www.breezywelding.com (vercel.app previously served duplicate content); JSON-LD
-  priceRange "$350-$2400" instead of "$$"; og:locale; aria-hidden on decorative SVGs.
+  image SEO); vercel.json 308 redirects added for the apex and breezywelding.vercel.app;
+  JSON-LD priceRange "$350-$2400" instead of "$$"; og:locale; aria-hidden on decorative SVGs.
   Hero + CTA band stay CSS backgrounds on purpose (hero is preloaded above the fold; the CTA
   band reuses trellis-poolside.jpg which the gallery img already caches).
 - FormSubmit activation confirmed by Bryan (Jul 2026): form was activated and tested working
@@ -96,9 +95,15 @@ shop-fabrication. `trellis-row.jpg` and `trellis-vines.jpg` are in the folder bu
 
 ## Deployment
 
-- Live at https://www.breezywelding.com (apex breezywelding.com 308-redirects to www;
-  https://breezywelding.vercel.app is the same deployment). Vercel auto-deploys pushes to
-  `main` — verified Jul 2026 that live content byte-matches HEAD.
+- Live at https://www.breezywelding.com (apex breezywelding.com 308-redirects to www).
+  Vercel auto-deploys pushes to `main`; project `breezywelding` in team
+  papi-grande-verga-guey (CLI login bryportillo56-3043).
+- **Stale duplicate (found Jul 17 2026):** https://breezywelding.vercel.app serves an OLD
+  snapshot of the site from a DIFFERENT Vercel account (not in this team; `vercel inspect`
+  can't see it) — it stopped updating when the project moved and Bryan needs to log into
+  that old account and delete the project. The vercel.json redirect rule for that hostname
+  is inert until then (requests never reach this project); its canonical tag pointing at
+  www.breezywelding.com limits the SEO damage meanwhile.
 - Canonical/OG URLs in index.html point at https://www.breezywelding.com/ — update them if
   the domain ever changes.
 
