@@ -1,0 +1,16 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "breezywelding.com" }],
+      "destination": "https://www.breezywelding.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "breezywelding.vercel.app" }],
+      "destination": "https://www.breezywelding.com/$1",
+      "permanent": true
+    }
+  ]
+}

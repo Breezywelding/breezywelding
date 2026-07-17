@@ -16,6 +16,7 @@
 <meta property="og:image" content="https://www.breezywelding.com/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Breezy Welding | Custom Gates, RV Gates &amp; Garden Trellises">
 <meta name="twitter:description" content="Hand-welded RV gates, entry gates, and garden trellises built to last the Arizona sun. Free estimates in the Phoenix metro.">
@@ -30,7 +31,7 @@
   "telephone": "[removed]",
   "email": "breezywelding@gmail.com",
   "image": "https://www.breezywelding.com/og.png",
-  "priceRange": "$$",
+  "priceRange": "$350-$2400",
   "areaServed": ["Phoenix", "Mesa", "Gilbert", "Chandler", "Tempe", "Scottsdale", "Queen Creek"],
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
@@ -120,10 +121,9 @@
   .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
   .card{background:var(--sand);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease}
   .card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
-  .card-img{height:210px;background:var(--steel-2) center/cover no-repeat;position:relative}
-  .card-img.rv{background-image:linear-gradient(rgba(0,0,0,.05),rgba(0,0,0,.05)),url('images/gate-rv-1.jpg');background-position:center 40%}
-  .card-img.single{background-image:linear-gradient(rgba(0,0,0,.05),rgba(0,0,0,.05)),url('images/gate-single-1.jpg')}
-  .card-img.trellis{background-image:linear-gradient(rgba(0,0,0,.05),rgba(0,0,0,.05)),url('images/trellis-1.jpg')}
+  .card-img{height:210px;background:var(--steel-2);position:relative}
+  .card-img img{width:100%;height:100%;object-fit:cover}
+  .card-img.rv img{object-position:center 40%}
   .card-body{padding:24px 24px 26px;flex:1;display:flex;flex-direction:column}
   .card-body h3{font-size:1.2rem;color:var(--steel);margin-bottom:10px}
   .card-body p{font-size:.95rem;color:var(--muted);flex:1}
@@ -151,17 +151,11 @@
 
   /* ===== Gallery ===== */
   .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-  .g-item{border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3;background:var(--steel-2) center/cover no-repeat;position:relative}
+  .g-item{border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3;background:var(--steel-2);position:relative}
+  .g-item img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
   .g-item span{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,rgba(0,0,0,.75));color:var(--white);font-size:.85rem;font-weight:600;padding:26px 14px 12px}
-  .g-1{background-image:url('images/gate-single-1.jpg');background-position:center 40%}
-  .g-2{background-image:url('images/trellis-pots.jpg')}
-  .g-3{background-image:url('images/trellis-poolside.jpg')}
-  .g-4{background-image:url('images/trellis-bougainvillea.jpg')}
-  .g-5{background-image:url('images/trellis-modern.jpg')}
-  .g-6{background-image:url('images/gate-rv-1.jpg')}
-  .g-7{background-image:url('images/gate-rv-2.jpg')}
-  .g-8{background-image:url('images/trellis-desert.jpg')}
-  .g-9{background-image:url('images/shop-fabrication.jpg');background-position:center 60%}
+  .g-1 img{object-position:center 40%}
+  .g-9 img{object-position:center 60%}
 
   /* ===== Reviews ===== */
   .reviews{background:var(--sand)}
@@ -242,7 +236,7 @@
       <a href="#process">Process</a>
       <a href="#faq">FAQ</a>
       <a href="tel:[removed]" class="nav-phone">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
         [removed]</a>
       <a href="#quote" class="btn">Free Quote</a>
     </nav>
@@ -261,9 +255,9 @@
         <a href="tel:[removed]" class="btn btn-lg btn-ghost">Call [removed]</a>
       </div>
       <div class="trust-row">
-        <div><svg width="16" height="16" viewBox="0 0 24 24" fill="#f57c1f"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 16.9 5.9 20.4l1.5-6.8L2.2 9l6.9-.7z"/></svg> Local &amp; Family-Run</div>
-        <div><svg width="16" height="16" viewBox="0 0 24 24" fill="#f57c1f"><path d="M12 1L3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-4zm-1 15l-4-4 1.4-1.4L11 13.2l5.6-5.6L18 9l-7 7z"/></svg> Workmanship Guarantee</div>
-        <div><svg width="16" height="16" viewBox="0 0 24 24" fill="#f57c1f"><path d="M12 22C6.5 22 2 17.5 2 12S6.5 2 12 2s10 4.5 10 10-4.5 10-10 10zm1-15h-2v6l5.2 3.1 1-1.6-4.2-2.5V7z"/></svg> Fast Turnaround</div>
+        <div><svg width="16" height="16" viewBox="0 0 24 24" fill="#f57c1f" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 16.9 5.9 20.4l1.5-6.8L2.2 9l6.9-.7z"/></svg> Local &amp; Family-Run</div>
+        <div><svg width="16" height="16" viewBox="0 0 24 24" fill="#f57c1f" aria-hidden="true"><path d="M12 1L3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-4zm-1 15l-4-4 1.4-1.4L11 13.2l5.6-5.6L18 9l-7 7z"/></svg> Workmanship Guarantee</div>
+        <div><svg width="16" height="16" viewBox="0 0 24 24" fill="#f57c1f" aria-hidden="true"><path d="M12 22C6.5 22 2 17.5 2 12S6.5 2 12 2s10 4.5 10 10-4.5 10-10 10zm1-15h-2v6l5.2 3.1 1-1.6-4.2-2.5V7z"/></svg> Fast Turnaround</div>
       </div>
     </div>
 
@@ -311,7 +305,7 @@
     </div>
     <div class="cards">
       <div class="card">
-        <div class="card-img rv"></div>
+        <div class="card-img rv"><img src="images/gate-rv-1.jpg" loading="lazy" alt="Dual swing RV gate with composite slats and a steel frame"></div>
         <div class="card-body">
           <h3>RV Gates</h3>
           <p>Wide-opening dual or single-swing RV gates with heavy-duty steel frames and composite or iron infill. Secure your side yard without sacrificing looks.</p>
@@ -320,7 +314,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-img single"></div>
+        <div class="card-img single"><img src="images/gate-single-1.jpg" loading="lazy" alt="Custom single walkway gate with wood look composite slats"></div>
         <div class="card-body">
           <h3>Single &amp; Walkway Gates</h3>
           <p>Custom entry and side-yard gates like the one above, with a powder-coated steel frame, composite wood-look slats, and self-latching hardware. Zero rot, zero warping.</p>
@@ -329,7 +323,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-img trellis"></div>
+        <div class="card-img trellis"><img src="images/trellis-1.jpg" loading="lazy" alt="Welded steel garden trellis in a backyard"></div>
         <div class="card-body">
           <h3>Garden Trellises</h3>
           <p>Welded steel trellises and garden structures that hold up to desert heat and heavy vines, from simple wall panels to full arbor features.</p>
@@ -351,22 +345,22 @@
     </div>
     <div class="why-grid">
       <div class="why-item">
-        <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="#f57c1f"><path d="M22 9l-9.9 9.9-4.2-4.2L9.3 13l2.8 2.8L20.6 7.6 22 9zM4 22h9v-2H4V4h9V2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2z"/></svg></div>
+        <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="#f57c1f" aria-hidden="true"><path d="M22 9l-9.9 9.9-4.2-4.2L9.3 13l2.8 2.8L20.6 7.6 22 9zM4 22h9v-2H4V4h9V2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2z"/></svg></div>
         <h3>True Custom Sizing</h3>
         <p>Measured to your exact opening, so you never end up with a stock panel forced into a space it doesn't fit.</p>
       </div>
       <div class="why-item">
-        <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="#f57c1f"><path d="M12 1L3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-4z"/></svg></div>
+        <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="#f57c1f" aria-hidden="true"><path d="M12 1L3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-4z"/></svg></div>
         <h3>Desert-Proof Materials</h3>
         <p>Powder-coated steel and composite infill that won't rot, warp, or peel in 115° summers.</p>
       </div>
       <div class="why-item">
-        <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="#f57c1f"><path d="M12 22C6.5 22 2 17.5 2 12S6.5 2 12 2s10 4.5 10 10-4.5 10-10 10zm1-15h-2v6l5.2 3.1 1-1.6-4.2-2.5V7z"/></svg></div>
+        <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="#f57c1f" aria-hidden="true"><path d="M12 22C6.5 22 2 17.5 2 12S6.5 2 12 2s10 4.5 10 10-4.5 10-10 10zm1-15h-2v6l5.2 3.1 1-1.6-4.2-2.5V7z"/></svg></div>
         <h3>On Time, On Budget</h3>
         <p>Clear quote up front, honest timeline, and we show up when we say we will.</p>
       </div>
       <div class="why-item">
-        <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="#f57c1f"><path d="M12 21.4l-1.4-1.3C5.4 15.4 2 12.3 2 8.5 2 5.4 4.4 3 7.5 3c1.7 0 3.4.8 4.5 2.1C13.1 3.8 14.8 3 16.5 3 19.6 3 22 5.4 22 8.5c0 3.8-3.4 6.9-8.6 11.6L12 21.4z"/></svg></div>
+        <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="#f57c1f" aria-hidden="true"><path d="M12 21.4l-1.4-1.3C5.4 15.4 2 12.3 2 8.5 2 5.4 4.4 3 7.5 3c1.7 0 3.4.8 4.5 2.1C13.1 3.8 14.8 3 16.5 3 19.6 3 22 5.4 22 8.5c0 3.8-3.4 6.9-8.6 11.6L12 21.4z"/></svg></div>
         <h3>Workmanship Guarantee</h3>
         <p>If a weld or hinge we installed fails, we come back and make it right. Period.</p>
       </div>
@@ -383,15 +377,15 @@
       <p>Real projects in real backyards. No stock photos.</p>
     </div>
     <div class="gallery-grid">
-      <div class="g-item g-1"><span>Composite single gate on a steel frame</span></div>
-      <div class="g-item g-2"><span>Flower-pot trellis wall, poolside</span></div>
-      <div class="g-item g-3"><span>Backyard trellis &amp; lounge wall</span></div>
-      <div class="g-item g-4"><span>Bougainvillea on a wall trellis</span></div>
-      <div class="g-item g-5"><span>Modern pool-wall trellis set</span></div>
-      <div class="g-item g-6"><span>Dual-swing RV gate, composite slats</span></div>
-      <div class="g-item g-7"><span>Cedar &amp; steel dual RV gate</span></div>
-      <div class="g-item g-8"><span>Desert backyard trellis set</span></div>
-      <div class="g-item g-9"><span>Fresh frames welded in our shop</span></div>
+      <div class="g-item g-1"><img src="images/gate-single-1.jpg" loading="lazy" alt="Composite single gate on a steel frame"><span>Composite single gate on a steel frame</span></div>
+      <div class="g-item g-2"><img src="images/trellis-pots.jpg" loading="lazy" alt="Flower pot trellis wall beside a pool"><span>Flower-pot trellis wall, poolside</span></div>
+      <div class="g-item g-3"><img src="images/trellis-poolside.jpg" loading="lazy" alt="Backyard trellis and lounge wall"><span>Backyard trellis &amp; lounge wall</span></div>
+      <div class="g-item g-4"><img src="images/trellis-bougainvillea.jpg" loading="lazy" alt="Bougainvillea growing on a wall trellis"><span>Bougainvillea on a wall trellis</span></div>
+      <div class="g-item g-5"><img src="images/trellis-modern.jpg" loading="lazy" alt="Modern pool wall trellis set"><span>Modern pool-wall trellis set</span></div>
+      <div class="g-item g-6"><img src="images/gate-rv-1.jpg" loading="lazy" alt="Dual swing RV gate with composite slats"><span>Dual-swing RV gate, composite slats</span></div>
+      <div class="g-item g-7"><img src="images/gate-rv-2.jpg" loading="lazy" alt="Cedar and steel dual swing RV gate"><span>Cedar &amp; steel dual RV gate</span></div>
+      <div class="g-item g-8"><img src="images/trellis-desert.jpg" loading="lazy" alt="Desert backyard trellis set"><span>Desert backyard trellis set</span></div>
+      <div class="g-item g-9"><img src="images/shop-fabrication.jpg" loading="lazy" alt="Steel gate frames freshly welded in the shop"><span>Fresh frames welded in our shop</span></div>
     </div>
   </div>
 </section>

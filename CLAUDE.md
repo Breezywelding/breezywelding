@@ -65,9 +65,23 @@ shop-fabrication. `trellis-row.jpg` and `trellis-vines.jpg` are in the folder bu
    that claim with Bryan or soften it.
 4. JSON-LD has no street address (shop address unknown) — add a PostalAddress if Bryan wants
    the shop or a service-area base listed; helps local search.
+5. Google Business Profile (learning from earthlight-lash, where the 5.0 x 37-review Google
+   listing became the site's main trust signal): if Bryan sets one up, add the rating badge,
+   aggregateRating JSON-LD, and a sameAs Maps link, and swap placeholder testimonials for
+   real review quotes.
+6. Phone number (earthlight-lash learning): EL publishes a Google Voice business number, not
+   the owner's personal cell. Confirm whether [removed] is Bryan's personal number and
+   whether he wants a separate business line before it spreads further across the web.
 
 ## Done
 
+- Earthlight-lash learnings pass (Jul 2026): gallery + service-card photos converted from CSS
+  backgrounds to real `<img loading="lazy">` with alt text (defers ~2 MB below the fold, adds
+  image SEO); vercel.json 308-redirects breezywelding.vercel.app and the apex to
+  https://www.breezywelding.com (vercel.app previously served duplicate content); JSON-LD
+  priceRange "$350-$2400" instead of "$$"; og:locale; aria-hidden on decorative SVGs.
+  Hero + CTA band stay CSS backgrounds on purpose (hero is preloaded above the fold; the CTA
+  band reuses trellis-poolside.jpg which the gallery img already caches).
 - FormSubmit activation confirmed by Bryan (Jul 2026): form was activated and tested working
   before the Jul 2026 formsubmit.co outage.
 - Form outage fallback + quote-card scroll-margin fix (Jul 2026), shipped during a formsubmit.co
