@@ -7,7 +7,10 @@ and `images/` holds real project photos. No build step, no dependencies, no fram
 ## Business facts (real data — do not invent or change without owner confirmation)
 
 - Owner: Bryan, welder/fabricator
-- Phone (call/text): [removed]
+- Phone: NONE on the site. Bryan's personal cell was published at launch but removed
+  Jul 19 2026 at his request; never publish it anywhere (this repo is public, so keep the
+  digits out of these docs too). Contact is email + quote form until he sets up a business
+  number (e.g. Google Voice).
 - Email: breezywelding@gmail.com
 - Service area: Phoenix metro — Mesa, Gilbert, Chandler, Tempe, Scottsdale, Queen Creek
 - Hours: Mon–Sat 7:00 AM – 6:00 PM
@@ -69,9 +72,10 @@ shop-fabrication. `trellis-row.jpg` and `trellis-vines.jpg` are in the folder bu
    listing became the site's main trust signal): if Bryan sets one up, add the rating badge,
    aggregateRating JSON-LD, and a sameAs Maps link, and swap placeholder testimonials for
    real review quotes.
-6. Phone number (earthlight-lash learning): EL publishes a Google Voice business number, not
-   the owner's personal cell. Confirm whether [removed] is Bryan's personal number and
-   whether he wants a separate business line before it spreads further across the web.
+6. Business phone number: when Bryan sets one up (e.g. Google Voice, like earthlight-lash),
+   restore the call CTAs that were removed Jul 19 2026: nav phone link, hero "Call" ghost
+   button (now "Email Us"), mobile call-bar Call button (now Email Us), footer contact line,
+   form-fallback copy, thanks.html "Need it sooner?" line, and JSON-LD telephone.
 
 ## Done
 

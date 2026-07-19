@@ -19,7 +19,7 @@ Missing images fall back to a dark steel color, so the site still looks fine bef
 
 ## Before launch, replace placeholders
 
-- ~~Phone number~~ DONE: [removed] everywhere.
+- ~~Phone number~~ REMOVED (Jul 2026): the number used at launch was Bryan's personal cell, so the site is email + quote form only until he sets up a business number.
 - ~~Email~~ DONE: breezywelding@gmail.com (form action + footer).
 - ~~Quote form~~ DONE: posts to [FormSubmit](https://formsubmit.co) → breezywelding@gmail.com (no account needed). Includes honeypot spam field, table-formatted email, and redirect to `thanks.html`. **One-time activation**: the FIRST form submission triggers a confirmation email to breezywelding@gmail.com, Bryan must click the activation link in it, then all future submissions arrive normally. Do this test submission once the site is deployed (activation is tied to the email, not the domain, so a localhost test works too).
 - **Service area / cities**: adjust in FAQ + footer if needed.
