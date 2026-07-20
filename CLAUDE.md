@@ -103,11 +103,14 @@ shop-fabrication. `trellis-row.jpg` and `trellis-vines.jpg` are in the folder bu
   Vercel auto-deploys pushes to `main`; project `breezywelding` in team
   papi-grande-verga-guey (CLI login bryportillo56-3043).
 - **Stale duplicate (found Jul 17 2026):** https://breezywelding.vercel.app serves an OLD
-  snapshot of the site from a DIFFERENT Vercel account (not in this team; `vercel inspect`
-  can't see it) — it stopped updating when the project moved and Bryan needs to log into
-  that old account and delete the project. The vercel.json redirect rule for that hostname
-  is inert until then (requests never reach this project); its canonical tag pointing at
-  www.breezywelding.com limits the SEO damage meanwhile.
+  snapshot of the site (including the removed personal phone number) from a DIFFERENT Vercel
+  account. Ruled out Jul 19 2026: it is not in this team, and "Continue with GitHub"
+  (Breezywelding) plus the bryportillo56@gmail.com email login both map to the CURRENT
+  account — so the old account is under some other email only Bryan may remember. Options:
+  try old emails at vercel.com/login (email code login, no password needed), or open a
+  Vercel support ticket (he owns breezywelding.com and the source repo, so they can locate
+  or take down the stale project). The vercel.json redirect rule for that hostname is inert
+  until then; its canonical tag pointing at www.breezywelding.com limits the SEO damage.
 - Canonical/OG URLs in index.html point at https://www.breezywelding.com/ — update them if
   the domain ever changes.
 
