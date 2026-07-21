@@ -7,10 +7,10 @@ and `images/` holds real project photos. No build step, no dependencies, no fram
 ## Business facts (real data — do not invent or change without owner confirmation)
 
 - Owner: Bryan, welder/fabricator
-- Phone: NONE on the site. Bryan's personal cell was published at launch but removed
-  Jul 19 2026 at his request; never publish it anywhere (this repo is public, so keep the
-  digits out of these docs too). Contact is email + quote form until he sets up a business
-  number (e.g. Google Voice).
+- Phone (call/text): (480) 359-5197 — Google Voice business number (Mesa, AZ; set up
+  Jul 20 2026, restored across the site the same day). Bryan's personal cell was published
+  at launch but removed Jul 19 2026 and scrubbed from git history; never publish it
+  anywhere (this repo is public, so keep those digits out of these docs too).
 - Email: breezywelding@gmail.com
 - Service area: Phoenix metro — Mesa, Gilbert, Chandler, Tempe, Scottsdale, Queen Creek
 - Hours: Mon–Sat 7:00 AM – 6:00 PM
@@ -72,10 +72,11 @@ shop-fabrication. `trellis-row.jpg` and `trellis-vines.jpg` are in the folder bu
    listing became the site's main trust signal): if Bryan sets one up, add the rating badge,
    aggregateRating JSON-LD, and a sameAs Maps link, and swap placeholder testimonials for
    real review quotes.
-6. Business phone number: when Bryan sets one up (e.g. Google Voice, like earthlight-lash),
-   restore the call CTAs that were removed Jul 19 2026: nav phone link, hero "Call" ghost
-   button (now "Email Us"), mobile call-bar Call button (now Email Us), footer contact line,
-   form-fallback copy, thanks.html "Need it sooner?" line, and JSON-LD telephone.
+6. Facebook ads (in progress Jul 2026): Meta Ads for the Breezy Welding AZ page — plan is
+   Ads Manager Leads objective with Instant Forms, geo targeting on the service-area cities,
+   $10-20/day. Pending from Bryan: confirm Meta Business/Ads Manager access and budget.
+   Possible site work: Meta Pixel + lead event on thanks.html, ad creatives from project
+   photos.
 
 ## Done
 
