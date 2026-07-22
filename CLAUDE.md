@@ -82,9 +82,10 @@ shop-fabrication. `trellis-row.jpg` and `trellis-vines.jpg` are in the folder bu
      1080x1080 + 1080x1350, brand overlay w/ price anchor + (480) 359-5197 CTA. Auto-fits price
      text to width. Regenerate/add concepts by editing make-ads.ps1. Bryan has BETTER trellis
      photos (window-grid panels, poolside waterfall) to drop into images/ads/ when available.
-   - Old drafts in the ad account (2 Marketplace boosts $0 spend, 1 unpublished $100/day
-     "Trellises" draft): tried to discard Jul 20 but the Ads Manager UI wouldn't confirm through
-     the browser session; harmless (no payment method on file so nothing can spend). Retry.
+   - Discarded the unpublished $100/day "Trellises" draft Jul 20 2026 (Discard drafts confirmed).
+     Two already-published Marketplace boosts remain but are inactive: "[Trellises] Marketplace
+     listing boosted 12/2/2025" (Off) and "[Custom Steel Trellis Sets] ... 4/26/2026" (Completed),
+     both $0.00 spent. Harmless; leave or delete individually if Bryan wants a clean slate.
    - Pending from Bryan: add a payment method (Billing), then publish the $10/day draft.
    - Possible site work: Meta Pixel + Lead event on thanks.html for conversion tracking.
 
