@@ -86,7 +86,10 @@ shop-fabrication. `trellis-row.jpg` and `trellis-vines.jpg` are in the folder bu
      Two already-published Marketplace boosts remain but are inactive: "[Trellises] Marketplace
      listing boosted 12/2/2025" (Off) and "[Custom Steel Trellis Sets] ... 4/26/2026" (Completed),
      both $0.00 spent. Harmless; leave or delete individually if Bryan wants a clean slate.
-   - Pending from Bryan: add a payment method (Billing), then publish the $10/day draft.
+   - Payment method IS on file (verified Aug 9 2026): MasterCard ending 4241, exp 03/31, on
+     ad account 603112911108501. "No payment due at this time", no spending limit set. So the
+     account is ready to run ads; earlier "no payment method" assumption was wrong. Remaining:
+     build the $10/day Leads draft, then Bryan reviews + publishes.
    - Possible site work: Meta Pixel + Lead event on thanks.html for conversion tracking.
 
 ## Done
