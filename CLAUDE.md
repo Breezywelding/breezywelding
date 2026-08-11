@@ -96,9 +96,27 @@ shop-fabrication. `trellis-row.jpg` and `trellis-vines.jpg` are in the folder bu
      listing boosted 12/2/2025" (Off) and "[Custom Steel Trellis Sets] ... 4/26/2026" (Completed),
      both $0.00 spent. Harmless; leave or delete individually if Bryan wants a clean slate.
    - Payment method IS on file (verified Aug 9 2026): MasterCard ending 4241, exp 03/31, on
-     ad account 603112911108501. "No payment due at this time", no spending limit set. So the
-     account is ready to run ads; earlier "no payment method" assumption was wrong. Remaining:
-     build the $10/day Leads draft, then Bryan reviews + publishes.
+     ad account 603112911108501. "No payment due at this time", no spending limit set.
+   - **Campaign draft built Aug 10 2026** (campaign 120249244621050637, adset
+     120249244621070637, ad 120249244621060637). Status: In draft, NOT published.
+     Campaign "Trellises & Gates - Leads - Phoenix Metro": Leads objective, Advantage+ leads
+     on, campaign budget $10.00/day, Highest volume bid.
+     Ad set "Phoenix Metro - Homeowners 28+": Instant forms conversion, page Breezy Welding AZ,
+     Maximize number of leads, location Phoenix AZ +25mi (audience ~12M), "Reach more people
+     likely to respond" UNCHECKED on purpose (it expands nationally; customers must own local
+     property).
+     Ad "Trellis - Bougainvillea Vertical": one vertical trellis photo from the account library
+     (1537x1921), CTA "Get quote", Spanish auto-translation left ON (big Phoenix market —
+     turn off if Bryan can't serve Spanish-speaking callers). Declined Meta's AI-generated
+     images and AI "visual touch-ups": the site's promise is real projects, no stock photos.
+   - **BLOCKER (Bryan must do, legal agreement):** "Terms of Service Not Accepted: You can't run
+     lead ads until your Facebook Page accepts Facebook's Lead Generation Terms of Service
+     (#1815089)." Accept via the Edit button on the error, or Page Settings > Lead Ads Terms.
+     The Instant form itself can't be created until that's accepted, so the ad still needs a
+     form attached afterward.
+   - Note: mcp file_upload failed in this environment, so the branded ad2-*.jpg creatives in
+     images/ads/ were NOT uploaded; the ad uses a clean library photo instead (clean photos
+     often outperform text-heavy overlays anyway). Upload the branded ones manually to A/B test.
    - Possible site work: Meta Pixel + Lead event on thanks.html for conversion tracking.
 
 ## Done
