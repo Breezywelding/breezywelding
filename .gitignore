@@ -3,6 +3,6 @@
 .env*
 
 # Ad working material — raw phone photos and videos are heavy and not site content.
-# Keep the finished ad-*.jpg / ad2-*.jpg creatives; ignore the large sources.
-images/ads/IMG_*
-images/ads/*.mov
+# Keep the finished ad-*.jpg / ad2-*.jpg creatives; ignore the large sources anywhere.
+IMG_*
+*.mov
