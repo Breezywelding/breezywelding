@@ -65,13 +65,13 @@
   img{max-width:100%;display:block}
   a{text-decoration:none;color:inherit}
   .container{max-width:1120px;margin:0 auto;padding:0 20px}
-  section{padding:72px 0;scroll-margin-top:76px}
+  section{padding:72px 0;scroll-margin-top:92px}
 
   /* ===== Header ===== */
-  header{position:sticky;top:0;z-index:100;background:var(--steel);box-shadow:0 2px 12px rgba(0,0,0,.35)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
-  .logo{font-family:'Oswald',sans-serif;font-weight:700;font-size:1.45rem;color:var(--white);text-transform:uppercase;letter-spacing:1px}
-  .logo span{color:var(--spark)}
+  header{position:sticky;top:0;z-index:100;background:linear-gradient(180deg,#1b1e24,#111318);border-bottom:2px solid rgba(245,124,31,.35);box-shadow:0 4px 18px rgba(0,0,0,.45)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:84px}
+  .logo{display:flex;align-items:center}
+  .logo img{height:64px;width:auto;display:block;filter:drop-shadow(0 1px 2px rgba(0,0,0,.4))}
   .nav-links{display:flex;gap:26px;align-items:center}
   .nav-links a{color:#cdd2da;font-weight:500;font-size:.95rem}
   .nav-links a:hover{color:var(--white)}
@@ -100,7 +100,7 @@
   .trust-row svg{flex:none}
 
   /* Quote card */
-  .quote-card{background:var(--white);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow);color:var(--text);scroll-margin-top:84px}
+  .quote-card{background:var(--white);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow);color:var(--text);scroll-margin-top:100px}
   .quote-card h3{font-size:1.35rem;margin-bottom:4px;color:var(--steel)}
   .quote-card p{font-size:.92rem;color:var(--muted);margin-bottom:18px}
   .quote-card label{display:block;font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);margin:12px 0 5px}
@@ -212,7 +212,8 @@
   }
   @media(max-width:700px){
     .nav-phone{display:none!important}
-    .logo{font-size:1.2rem}
+    .nav{height:70px}
+    .logo img{height:50px}
     .nav .btn{padding:11px 18px;font-size:.95rem}
   }
   @media(max-width:560px){
@@ -229,7 +230,7 @@
 
 <header>
   <div class="container nav">
-    <a href="#" class="logo">Breezy<span>Welding</span></a>
+    <a href="#" class="logo" aria-label="Breezy Welding home"><img src="images/logo.png" alt="Breezy Welding — Mobile Welding &amp; Metal Fabrication"></a>
     <nav class="nav-links">
       <a href="#services">Services</a>
       <a href="#gallery">Our Work</a>

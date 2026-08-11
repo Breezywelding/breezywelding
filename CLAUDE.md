@@ -37,6 +37,15 @@ outages, consider switching to Web3Forms or Formspree. **One-time activation:** 
 email to breezywelding@gmail.com; Bryan must click the activation link before submissions arrive.
 Activation is tied to the email, not the domain, so a localhost test submission works.
 
+## Logo
+
+`images/logo.png` — the real Breezy Welding badge (welder + "Mobile Welding & Metal
+Fabrication" arc + "BREEZY WELDING" banner), processed Aug 2026 from Bryan's original
+(OneDrive\Pictures\My logo.jpeg): near-black background keyed to transparent + trimmed, so
+it sits on the dark header. Shown ~64px tall in the header (50px on mobile). If the logo is
+re-exported, re-run the transparency/trim (scratchpad make-logo2.ps1 pattern). The tagline
+mentions "Mobile Welding" — a real service angle not yet worked into the site copy.
+
 ## Design system (industrial/trade — keep this identity)
 
 - Colors (CSS variables in :root): steel dark #1c1f24 / #262a31, spark orange #f57c1f /
