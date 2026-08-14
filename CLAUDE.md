@@ -95,8 +95,9 @@ shop-fabrication. `trellis-row.jpg` and `trellis-vines.jpg` are in the folder bu
      Two already-published Marketplace boosts remain but are inactive: "[Trellises] Marketplace
      listing boosted 12/2/2025" (Off) and "[Custom Steel Trellis Sets] ... 4/26/2026" (Completed),
      both $0.00 spent. Harmless; leave or delete individually if Bryan wants a clean slate.
-   - Payment method IS on file (verified Aug 9 2026): MasterCard ending 4241, exp 03/31, on
-     ad account 603112911108501. "No payment due at this time", no spending limit set.
+   - Payment method IS on file (verified Aug 9 2026) on ad account 603112911108501. "No payment due
+     at this time", no spending limit set. Card details deliberately not recorded here: this repo is
+     public. Check them in Ads Manager > Billing if needed.
    - **Campaign draft built Aug 10 2026** (campaign 120249244621050637, adset
      120249244621070637, ad 120249244621060637). Status: In draft, NOT published.
      Campaign "Trellises & Gates - Leads - Phoenix Metro": Leads objective, Advantage+ leads
@@ -117,6 +118,77 @@ shop-fabrication. `trellis-row.jpg` and `trellis-vines.jpg` are in the folder bu
    - Note: mcp file_upload failed in this environment, so the branded ad2-*.jpg creatives in
      images/ads/ were NOT uploaded; the ad uses a clean library photo instead (clean photos
      often outperform text-heavy overlays anyway). Upload the branded ones manually to A/B test.
+   - **Two ChatGPT flyer creatives added Aug 11 2026** (sources: the two `ChatGPT Image Aug 11,
+     2026, 06_0*.png` files in images/ads/, 1086x1448 and 1402x1122). Both put the logo at the
+     very top edge and the (480) 359-5197 CTA band at the very bottom, so Meta's auto-crop would
+     clip them. Refit onto Meta-native canvases by scaling to fit and letterboxing on near-black
+     (#0a0a0a), which matches the ads' own black field and is nearly invisible:
+     - `ad3-built-strong-4x5.jpg` 1080x1350 — "BUILT STRONG. MADE TO LAST.", 34px side bars only
+       (source was 3:4, almost 4:5 already). Best of the set; 4:5 owns the most mobile feed space.
+     - `ad3-elevate-1x1.jpg` 1080x1080 — "ELEVATE YOUR OUTDOOR SPACE.", 108px top/bottom bars.
+       Source is 5:4 landscape, so square costs the least padding; a 4:5 version wasted 36% of
+       the canvas on black and was discarded.
+     - `ad3-built-strong-1x1.jpg` 1080x1080 — square spare of the first, 135px side bars.
+     Regenerate via the scratchpad `fit-ads.ps1` pattern (System.Drawing, fit + letterbox).
+     Content check: the "built strong" scene is an AI restage of the real trellis-panels-trio.jpg
+     project, but the "elevate" poolside backyard is fully synthetic, which cuts against the
+     site's real-projects-only promise. Bryan's call; he generated them deliberately.
+     These are flyer-style with heavy text. Meta dropped the 20% text rule in 2021 so they won't
+     be rejected, but dense text still tends to underdeliver and the small body copy is
+     unreadable at feed thumbnail size. The existing bougainvillea ad is a clean photo, so
+     keeping all three in one ad set makes the campaign a real flyer-vs-clean-photo test.
+   - **Both creatives are now IN the campaign (Aug 11 2026), still In draft.** Duplicated ad
+     120249244621060637 twice into the same ad set (duplicating inherits page identity, CTA and
+     destination, so only image + text needed changing). The ad set now holds three ads:
+     - `Trellis - Built Strong Flyer 4x5` (ad 120249301860860637) — now ad4-built-strong-4x5.jpg
+       (see the Aug 12 entry below; superseded ad3-built-strong-4x5.jpg). Kept the original primary
+       text and "Custom Steel Trellises From $350" headline, since both already fit the
+       trellis-panel creative; image swap only, so it reads as a clean image test.
+     - `Trellis - Elevate Outdoor Space 1x1` (ad 120249301860870637) — ad3-elevate-1x1.jpg, new
+       primary text ("Turn a blank block wall into something worth looking at...") and headline
+       "Elevate Your Outdoor Space", to match that creative's message.
+     - `Trellis - Bougainvillea Vertical` (original, clean library photo) — left untouched.
+     Description "Free estimates in the Phoenix metro" and CTA "Get quote" on all three.
+   - **Meta AI defaults turned OFF on both new ads** (they are ON by default and silently rewrite
+     the creative): Add music, Add overlays (would stack more text on an already text-heavy
+     flyer), Text improvements (rewrites the headline). Visual touch-ups was already off. Add
+     animation left on but inert, Meta reports these images ineligible for animation. Declined the
+     AI-generated image variants Meta auto-produced from the upload. Re-check these toggles on any
+     future ad, they default back on.
+   - Uploading needed a workaround: Ads Manager builds its `input[type=file]` on demand and clicks
+     it programmatically, so no file input exists in the DOM to target and the native picker can't
+     be driven. Patched `HTMLInputElement.prototype.click` to capture the input and swallow the
+     click, leaving it in the DOM for the upload, then removed it and restored the prototype. This
+     is why the earlier session's file_upload attempt failed. Note the picker auto-selects the new
+     image ALONGSIDE the existing one ("2 selected"); deselect the old one or the ad goes carousel.
+   - Left ON deliberately: Spanish translation with "Translate all ad creatives and text". Checked
+     the Aug 12 before/after preview: only the caption is translated, the text baked into the
+     flyer is left alone, so the earlier worry about a mangled Spanish render does not apply.
+   - **Main creative as of Aug 12 2026: `ad4-built-strong-4x5.jpg`** (1080x1350; 1x1 also built).
+     Same "BUILT STRONG. MADE TO LAST." flyer but using the REAL trellis-panels-trio project photo
+     instead of the AI restage, so it now shows Bryan's actual work. Source was another ChatGPT
+     generation (`984ebb27-…png`, 1086x1448). It is live in ad 120249301860860637, still In draft.
+   - **The generated logo was misspelled** — the arc read "MOBILE WELDING & METAL FABRICAATION"
+     (doubled A). ChatGPT could not fix it across four regenerations; image models are unreliable
+     with text, so do not burn attempts on this. Fixed in-repo instead by compositing the real
+     `images/logo.png` over the bad badge. Working script pattern is scratchpad `fix-logo5.ps1`:
+     - The old artwork occupies x 43..459, y 40..287 on a flat black field, with an empty gap at
+       y 288..323 before the "BUILT" headline starts at y=324.
+     - Erase only the old badge's own pixels (bright AND neutral: min(R,G,B) > 22 — the background
+       gradient is blue-tinted so its min channel stays low) and rebuild the background beneath by
+       interpolating across each run, row by row. Do NOT flat-fill: that flattens the gradient and
+       leaves a vertical seam.
+     - **Stop the erase at x=460.** The photo's sunlit roof tiles and stucco wall start around
+       x=461 and are bright and neutral too, so they match the same test; letting the region reach
+       them blackened real photo content into a hard-cornered block (the bug that cost several
+       iterations). Everything from x=461 out is left pixel-identical to the source.
+     - Read one pixel PAST each side of the region as a blend target while only writing inside it,
+       or a run touching the edge terminates in flat black against the sky and leaves a step.
+     - Draw the real badge at the old artwork's WIDTH (417) but its own 1.584:1 ratio, so h=263;
+       anchor the BOTTOM at y=288 and let it grow upward. Filling the old 417x248 box instead
+       stretches it ~6% and reads as visibly squished. Growing downward would drop the banner onto
+       the stucco wall (starts ~y=296), which would show through its transparent interior.
+     Bryan reviews these at high zoom and catches edge artifacts, so check corners before sending.
    - Possible site work: Meta Pixel + Lead event on thanks.html for conversion tracking.
 
 ## Done
